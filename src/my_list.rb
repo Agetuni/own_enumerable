@@ -5,8 +5,12 @@ class MyList
     @list = arr
   end
 
-  def each(&block)
-    @list.each(&block)
+  def each
+    @i = 0
+    while @i < @list.length
+      puts @list[@i]
+      @i += 1
+    end
   end
 end
 

@@ -1,17 +1,19 @@
 # Own Enumerable
 
-> Creating Enumeralbe
+> In this project we will learn how to use a module inside a class. For this, we created a class MyList and a module MyEnumerable. 
+> The module MyEnumerable implements a subset of the functionality of Enumerable.
 
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
 git clone https://github.com/Agetuni/own_enumerable in your terminal
 
-Then, using your IRB program, you can decode a message like this, using the decode_all method:
-decode_all(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
-Output: => "A BOX FULL OF RUBIES"
+* Then, change the directory and run the source code:
+cd src
+ruby my_list.rb  
 
 ## Authors
+
 👤 **Carlos Molina**
 - GitHub: https://github.com/cmolinan
 - LinkedIn: [Carlos Molina](https://www.linkedin.com/in/carlosmolinan/)

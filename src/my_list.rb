@@ -1,36 +1,33 @@
-require './enumerable'
+require_relative './enumerable'
 class MyList
   include MyEnumerable
-  def initialize(var1, var2, var3, var4)
-    @list = [var1, var2, var3, var4]
+  def initialize(*arr)
+    @list = arr
   end
 
-  def each
-    @i = 0
-    while @i < @list.length
-      puts @list[@i]
-      @i += 1
-    end
+  def each(&block)
+    @list.each(&block)
   end
 end
 
 # Create our list
 list = MyList.new(1, 2, 3, 4)
 # <MyList: @list=[1, 2, 3, 4]>
-list.each
 
 # Test #all?
-list.all? { |e| e < 5 }
-#=> true
-list.all? { |e| e > 5 }
-#=> false
+p(list.all? { |e| e < 5 })
+# => true
+
+p(list.all? { |e| e > 5 })
+# => false
 
 # Test #any?
-list.any? { |e| e == 2 }
-#=> true
-list.any? { |e| e == 5 }
-#=> false
+p(list.any? { |e| e == 2 })
+# => true
+
+p(list.any? { |e| e == 5 })
+# => false
 
 # Test #filter
-list.filter(&:even?)
-#=> [2, 4]
+p list.filter(&:even?)
+# => [2, 4]
